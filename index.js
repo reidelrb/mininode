@@ -5,9 +5,9 @@ const express = require('express');
 
 setInterval(() => {
   fetch('https://mininode.onrender.com/all')
-    .then(response => console.log('Keep-alive ping successful'))
-    .catch(error => console.error('Keep-alive ping failed', error));
-}, 40); // Cada 10 minutos
+    .then(response => console.log('ping to me'))
+    .catch(error => console.error('ping failed', error));
+}, 50000); // Cada 50segundos
 
 
    // Middleware para parsear JSON
@@ -15,7 +15,7 @@ setInterval(() => {
 
    // Endpoint /new
    app.get('/new', (req, res) => {
-       res.json({ code: 're57hem' });
+       res.json({ code: 'actualizado' });
    });
 
    // Endpoint /list
