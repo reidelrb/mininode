@@ -3,6 +3,13 @@ const express = require('express');
    const app = express();
    const port = process.env.PORT || 1000;
 
+setInterval(() => {
+  fetch('https://mininode.onrender.com/all')
+    .then(response => console.log('Keep-alive ping successful'))
+    .catch(error => console.error('Keep-alive ping failed', error));
+}, 600000); // Cada 10 minutos
+
+
    // Middleware para parsear JSON
    app.use(express.json());
 
