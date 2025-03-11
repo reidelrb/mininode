@@ -7,7 +7,7 @@ setInterval(() => {
   fetch('https://mininode.onrender.com/all')
     .then(response => console.log('Keep-alive ping successful'))
     .catch(error => console.error('Keep-alive ping failed', error));
-}, 600000); // Cada 10 minutos
+}, 40); // Cada 10 minutos
 
 
    // Middleware para parsear JSON
